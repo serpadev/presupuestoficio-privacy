@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
   <title>Política de Privacidad — PresupuestoOficio</title>
   <style>
+    :root { color-scheme: light dark; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -14,19 +16,19 @@
       background: #f7f8fc;
     }
     header {
-      background: linear-gradient(135deg, #1565c0 0%, #0288d1 100%);
-      color: white;
+      background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+      color: #ffffff;
       padding: 48px 24px 36px;
       text-align: center;
     }
     header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
-    header p  { font-size: 1rem; opacity: 0.85; }
+    header p  { font-size: 1rem; color: #ffffff; }
     main {
       max-width: 820px;
       margin: 40px auto;
       padding: 0 24px 60px;
     }
-    section { background: white; border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+    section { background: #ffffff; border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
     h2 { font-size: 1.2rem; font-weight: 700; color: #1565c0; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
     h2 .icon { font-size: 1.3rem; }
     p, li { color: #374151; margin-bottom: 10px; }
@@ -35,7 +37,7 @@
     .badge {
       display: inline-block;
       background: #e3f2fd;
-      color: #1565c0;
+      color: #0d47a1;
       font-size: 0.82rem;
       font-weight: 600;
       padding: 2px 10px;
@@ -49,16 +51,29 @@
       border-radius: 0 8px 8px 0;
       margin: 14px 0;
     }
-    .highlight p { margin: 0; font-weight: 500; }
+    .highlight p { margin: 0; font-weight: 500; color: #1f2937; }
     footer {
       text-align: center;
       padding: 24px;
       font-size: 0.85rem;
-      color: #6b7280;
+      color: #4b5563;
     }
-    a { color: #1565c0; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .updated { font-size: 0.85rem; color: #6b7280; margin-top: 4px; }
+    a { color: #1565c0; text-decoration: underline; }
+    header .updated { font-size: 0.85rem; color: #ffffff; margin-top: 4px; }
+
+    @media (prefers-color-scheme: dark) {
+      body { color: #e5e7eb; background: #0f1623; }
+      header { background: linear-gradient(135deg, #0b2a5b 0%, #0d47a1 100%); color: #ffffff; }
+      header p, header .updated { color: #ffffff; }
+      section { background: #1a2233; box-shadow: 0 2px 8px rgba(0,0,0,.4); }
+      h2 { color: #90caf9; }
+      p, li { color: #d1d5db; }
+      .badge { background: #0d3a66; color: #bbdefb; }
+      .highlight { background: #10304a; border-left-color: #64b5f6; }
+      .highlight p { color: #e5e7eb; }
+      footer { color: #9ca3af; }
+      a { color: #90caf9; }
+    }
   </style>
 </head>
 <body>
@@ -66,111 +81,185 @@
 <header>
   <h1>PresupuestoOficio</h1>
   <p>Política de Privacidad</p>
-  <p class="updated">Última actualización: 16 de marzo de 2026</p>
+  <p class="updated">Última actualización: 22 de noviembre de 2026</p>
 </header>
 
 <main>
 
-  <section>
-    <h2><span class="icon">📋</span> Información general</h2>
+  <section aria-labelledby="sec1">
+    <h2 id="sec1"><span class="icon" aria-hidden="true">📋</span> Quién es el responsable</h2>
     <p>
-      Esta Política de Privacidad describe cómo <strong>PresupuestoOficio: Factura PDF</strong>
-      (en adelante, «la Aplicación») trata la información que introduces al usarla.
+      Esta Política de Privacidad describe cómo <strong>PresupuestoOficio</strong>
+      (en adelante, «la Aplicación») trata la información cuando la usas.
     </p>
     <p>
-      La Aplicación es desarrollada por <strong>SerPaDev</strong> y está diseñada para que
-      profesionales y autónomos puedan crear presupuestos, facturas y gestionar su actividad
-      desde su dispositivo móvil.
+      La Aplicación es desarrollada por <strong>SerPaDev</strong> y está dirigida a
+      profesionales y autónomos que crean presupuestos y gestionan su actividad
+      desde su dispositivo móvil. Contacto:
+      <a href="mailto:serpadvlp@gmail.com">serpadvlp@gmail.com</a>.
     </p>
     <div class="highlight">
-      <p>🔒 Todos tus datos se almacenan exclusivamente en tu dispositivo. La Aplicación no dispone de servidores propios ni envía información a terceros.</p>
+      <p>🔒 Tus datos de trabajo (perfil, clientes y presupuestos) se guardan en tu dispositivo. La Aplicación no dispone de servidores propios donde almacenarlos. Sí utiliza servicios de Google, que se describen más abajo.</p>
     </div>
   </section>
 
-  <section>
-    <h2><span class="icon">📦</span> Datos que almacena la aplicación</h2>
-    <p>La Aplicación guarda en el almacenamiento local de tu dispositivo únicamente los datos que tú introduces:</p>
+  <section aria-labelledby="sec2">
+    <h2 id="sec2"><span class="icon" aria-hidden="true">📦</span> Datos que guarda la aplicación y dónde</h2>
+    <p>La Aplicación guarda en el almacenamiento de tu dispositivo los datos que tú introduces:</p>
     <ul>
-      <li><strong>Datos de tu perfil profesional:</strong> nombre o razón social, NIF/CIF, dirección, teléfono, correo electrónico, oficio y logotipo.</li>
-      <li><strong>Datos de clientes:</strong> nombre, NIF/CIF, dirección y datos de contacto.</li>
-      <li><strong>Presupuestos y facturas:</strong> partidas de trabajo, importes, impuestos, estado y fechas.</li>
-      <li><strong>Preferencias de la aplicación:</strong> idioma, configuración fiscal (nombre e importe del impuesto), preferencias de diseño de documentos.</li>
+      <li><strong>Tu perfil profesional:</strong> nombre o razón social, identificador fiscal, dirección, teléfono, correo electrónico, oficio y logotipo.</li>
+      <li><strong>Tus clientes:</strong> nombre, teléfono, correo electrónico, identificador fiscal, dirección y notas.</li>
+      <li><strong>Presupuestos:</strong> partidas de trabajo, importes, impuestos, anticipos, estado y fechas.</li>
+      <li><strong>Avisos y citas:</strong> etiqueta, nota, fecha y hora.</li>
+      <li><strong>Preferencias:</strong> idioma, moneda, configuración fiscal y de los documentos.</li>
+      <li><strong>Archivo de facturas antiguas:</strong> la Aplicación ya no emite facturas, pero conserva, solo para consulta, las que se crearon con versiones anteriores.</li>
     </ul>
-    <span class="badge">Almacenamiento local únicamente</span>
-    <p>Ninguno de estos datos sale de tu dispositivo salvo cuando tú mismo los compartes (por ejemplo, al exportar un PDF y enviarlo por correo o mensajería).</p>
+    <span class="badge">Almacenamiento en el dispositivo</span>
+    <p>Estos datos no se envían a ningún servidor nuestro. Salen del dispositivo solo en los casos descritos en las secciones de servicios de terceros, copias de seguridad y compartir.</p>
   </section>
 
-  <section>
-    <h2><span class="icon">🚫</span> Lo que NO hacemos</h2>
+  <section aria-labelledby="sec3">
+    <h2 id="sec3"><span class="icon" aria-hidden="true">🧑‍🤝‍🧑</span> Datos de tus clientes</h2>
+    <p>
+      Los datos de tus clientes (nombre, contacto, identificador fiscal, dirección, notas)
+      los introduces tú y se guardan solo en tu dispositivo. Tú eres quien decide qué
+      datos de terceros guarda y quien responde de su tratamiento.
+      SerPaDev no accede a ellos.
+    </p>
+  </section>
+
+  <section aria-labelledby="sec4">
+    <h2 id="sec4"><span class="icon" aria-hidden="true">☁️</span> Servicios de terceros</h2>
+    <p>La Aplicación incluye los siguientes servicios, prestados por Google:</p>
     <ul>
-      <li>No recopilamos datos personales en servidores externos.</li>
-      <li>No compartimos tu información con terceros.</li>
-      <li>No mostramos publicidad.</li>
-      <li>No realizamos seguimiento de tu comportamiento dentro de la app.</li>
-      <li>No accedemos a tu ubicación, cámara ni micrófono (salvo que otorgues permiso expreso para importar un logotipo desde la galería).</li>
+      <li>
+        <strong>Firebase Analytics:</strong> está siempre activo. Recoge eventos de uso
+        (por ejemplo, que se ha creado un presupuesto, un cliente o un aviso) y
+        propiedades como tu oficio, tu moneda y si tienes la versión premium.
+        La Aplicación no ofrece un interruptor para desactivarlo.
+      </li>
+      <li>
+        <strong>Firebase Crashlytics:</strong> en la versión publicada recibe informes de
+        errores con el tipo de error y su pila técnica. No se envía el texto del error ni
+        datos de tus clientes o presupuestos.
+      </li>
+      <li>
+        <strong>Google AdMob:</strong> solo en la versión gratuita se muestran anuncios.
+        AdMob puede usar el identificador de publicidad de tu dispositivo y otros datos
+        técnicos para mostrarlos. Puedes restablecer o desactivar ese identificador
+        en los ajustes de Android (Google &gt; Anuncios).
+      </li>
+      <li>
+        <strong>Google Play:</strong> la versión premium es una compra única que gestiona
+        Google Play. El pago lo procesa Google; SerPaDev no recibe los datos de tu tarjeta
+        ni de tu método de pago.
+      </li>
+    </ul>
+    <p>
+      Los anuncios pueden ser personalizados: la Aplicación usa la configuración por
+      defecto de AdMob y no muestra un formulario de consentimiento propio.
+      El SDK de Google Mobile Ads se inicia al abrir la Aplicación también en la versión
+      premium, aunque en ella no se muestren anuncios.
+    </p>
+    <p>
+      Al comprar, restaurar o activar la versión premium, Firebase Analytics recibe los identificadores de la transacción de
+      Google Play (identificador de compra y de pedido) y, si la compra falla, el código
+      y el mensaje de error que devuelve Google Play.
+    </p>
+    <p>
+      Como parte de su funcionamiento, los SDK de Firebase y de AdMob pueden añadir por su
+      cuenta identificadores de instalación o de instancia de la Aplicación y datos
+      técnicos del dispositivo (por ejemplo, modelo, versión del sistema e idioma).
+    </p>
+    <p>
+      Estos servicios tratan datos conforme a sus propias políticas:
+      <a href="https://policies.google.com/privacy">política de privacidad de Google</a> y
+      <a href="https://firebase.google.com/support/privacy">privacidad en Firebase</a>.
+    </p>
+  </section>
+
+  <section aria-labelledby="sec5">
+    <h2 id="sec5"><span class="icon" aria-hidden="true">💾</span> Copias de seguridad</h2>
+    <ul>
+      <li><strong>Copia automática de Android:</strong> la Aplicación permite la copia de seguridad de Android. Si la tienes activada, Android puede guardar en tu cuenta de Google la base de datos de la Aplicación (incluidos tus clientes y presupuestos) y sus preferencias, y restaurarlas al cambiar de móvil. La gestiona Google, no SerPaDev.</li>
+      <li><strong>Copia manual:</strong> puedes exportar una copia en un archivo JSON desde Ajustes. Ese archivo contiene tus datos y es tuyo: tú decides dónde guardarlo y con quién compartirlo.</li>
+      <li><strong>Copia automática local:</strong> la Aplicación guarda copias en una carpeta privada de su propio espacio en tu dispositivo.</li>
     </ul>
   </section>
 
-  <section>
-    <h2><span class="icon">📄</span> Generación de PDFs</h2>
+  <section aria-labelledby="sec6">
+    <h2 id="sec6"><span class="icon" aria-hidden="true">📄</span> Compartir documentos</h2>
     <p>
-      Los presupuestos y facturas se generan como archivos PDF directamente en tu dispositivo.
-      Estos archivos se guardan en el almacenamiento interno de la aplicación y solo son
-      accesibles si tú decides compartirlos o exportarlos.
+      Los presupuestos se generan como PDF en tu dispositivo. Solo salen de él cuando tú
+      decides compartirlos (por correo, WhatsApp u otra aplicación), exportar una copia o
+      abrir el chat o la llamada con un cliente. Lo que se comparte queda sujeto a la
+      política de la aplicación que elijas.
+    </p>
+    <p>
+      Los archivos temporales (PDF, exportaciones) se guardan en la caché privada de la
+      Aplicación y se borran automáticamente pasado un tiempo.
     </p>
   </section>
 
-  <section>
-    <h2><span class="icon">💳</span> Compras en la aplicación</h2>
+  <section aria-labelledby="sec7">
+    <h2 id="sec7"><span class="icon" aria-hidden="true">🔔</span> Notificaciones</h2>
     <p>
-      La Aplicación ofrece una versión premium mediante una compra única a través de
-      <strong>Google Play Billing</strong>. El procesamiento del pago lo gestiona
-      íntegramente Google; SerPaDev no recibe ni almacena datos de tu tarjeta o método de pago.
-    </p>
-    <p>Consulta la política de privacidad de Google para más información sobre cómo gestionan las transacciones.</p>
-  </section>
-
-  <section>
-    <h2><span class="icon">🛡️</span> Seguridad</h2>
-    <p>
-      Dado que los datos se almacenan localmente en tu dispositivo, la seguridad de la
-      información depende en gran medida de las medidas de protección de tu propio
-      dispositivo (PIN, huella dactilar, cifrado del sistema operativo, etc.).
-    </p>
-    <p>Te recomendamos mantener tu dispositivo actualizado y protegido con contraseña.</p>
-  </section>
-
-  <section>
-    <h2><span class="icon">👤</span> Tus derechos</h2>
-    <p>
-      En cualquier momento puedes acceder, rectificar o eliminar todos tus datos simplemente
-      usando las funciones de la propia aplicación (editar perfil, eliminar clientes,
-      presupuestos, etc.) o desinstalando la aplicación, lo que eliminará todos los datos
-      almacenados.
-    </p>
-    <p>
-      Si tienes preguntas sobre tu privacidad, puedes contactarnos en:
-      <a href="mailto:serpadev@gmail.com">serpadev@gmail.com</a>
+      Los avisos y recordatorios de citas son notificaciones locales programadas en tu
+      dispositivo. No pasan por ningún servidor.
     </p>
   </section>
 
-  <section>
-    <h2><span class="icon">🔄</span> Cambios en esta política</h2>
-    <p>
-      Si en el futuro introdujéramos funcionalidades que impliquen el tratamiento de datos
-      externos (como sincronización en la nube), actualizaremos esta política con suficiente
-      antelación e informaremos a los usuarios a través de la propia aplicación.
-    </p>
-    <p>La fecha de «última actualización» al inicio de este documento indica cuándo se realizó la revisión más reciente.</p>
+  <section aria-labelledby="sec8">
+    <h2 id="sec8"><span class="icon" aria-hidden="true">🔑</span> Permisos que solicita la aplicación</h2>
+    <ul>
+      <li><strong>Internet:</strong> para los servicios de Google descritos (anuncios, estadísticas, informes de errores y compras).</li>
+      <li><strong>Identificador de publicidad:</strong> para los anuncios de la versión gratuita.</li>
+      <li><strong>Notificaciones:</strong> para mostrar tus avisos y recordatorios.</li>
+      <li><strong>Alarmas exactas (solo hasta Android 12L) e inicio del dispositivo:</strong> para programar y recuperar los avisos tras reiniciar el móvil.</li>
+      <li><strong>Mantener activo el dispositivo:</strong> para que los avisos se entreguen a tiempo.</li>
+    </ul>
+    <p>La Aplicación no te pide acceso a la ubicación ni al micrófono. Para elegir un logotipo accede solo a la imagen que seleccionas de tu galería.</p>
   </section>
 
-  <section>
-    <h2><span class="icon">📬</span> Contacto</h2>
-    <p>Para cualquier consulta relacionada con la privacidad:</p>
+  <section aria-labelledby="sec9">
+    <h2 id="sec9"><span class="icon" aria-hidden="true">🗑️</span> Cómo borrar tus datos</h2>
+    <ul>
+      <li>Puedes editar los datos de tu perfil y eliminar clientes, presupuestos y avisos desde la propia Aplicación.</li>
+      <li>Al desinstalar la Aplicación o borrar sus datos en los ajustes de Android se elimina lo guardado en tu dispositivo.</li>
+      <li>Si tenías activada la copia de seguridad de Android, la copia almacenada por Google se gestiona desde los ajustes de copia de seguridad de tu cuenta de Google.</li>
+      <li>Los archivos que hayas compartido o exportado no se borran con la Aplicación: eliminarlos depende de ti.</li>
+      <li>Para consultas sobre tus datos, escribe a <a href="mailto:serpadvlp@gmail.com">serpadvlp@gmail.com</a>.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="sec10">
+    <h2 id="sec10"><span class="icon" aria-hidden="true">🛡️</span> Seguridad</h2>
+    <p>
+      Como los datos se guardan en tu dispositivo, su seguridad depende en gran medida de
+      las protecciones del propio dispositivo (bloqueo de pantalla, cifrado del sistema,
+      actualizaciones). Te recomendamos mantenerlo actualizado y protegido.
+    </p>
+  </section>
+
+  <section aria-labelledby="sec11">
+    <h2 id="sec11"><span class="icon" aria-hidden="true">👤</span> Menores</h2>
+    <p>La Aplicación está dirigida a profesionales y autónomos, no a menores de edad.</p>
+  </section>
+
+  <section aria-labelledby="sec12">
+    <h2 id="sec12"><span class="icon" aria-hidden="true">🔄</span> Cambios en esta política</h2>
+    <p>
+      Podemos actualizar esta política cuando la Aplicación cambie. La fecha de
+      «última actualización» al inicio indica la revisión más reciente.
+    </p>
+  </section>
+
+  <section aria-labelledby="sec13">
+    <h2 id="sec13"><span class="icon" aria-hidden="true">📬</span> Contacto</h2>
     <ul>
       <li><strong>Desarrollador:</strong> SerPaDev</li>
-      <li><strong>Correo electrónico:</strong> <a href="mailto:serpadev@gmail.com">serpadev@gmail.com</a></li>
-      <li><strong>Aplicación:</strong> PresupuestoOficio: Factura PDF</li>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:serpadvlp@gmail.com">serpadvlp@gmail.com</a></li>
+      <li><strong>Aplicación:</strong> PresupuestoOficio</li>
     </ul>
   </section>
 
